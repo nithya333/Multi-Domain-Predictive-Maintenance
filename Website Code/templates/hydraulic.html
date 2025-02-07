@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Maintenance of Hydraulic Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+
+<body class="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed relative">
+    <div class="absolute inset-0 bg-black/30 backdrop-blur-md"></div>
+    <div class="relative z-10">
+        <!-- Navbar -->
+        <nav class="bg-white text-black p-6 shadow-md">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8838/8838179.png" alt="Logo" class="w-10 h-10">
+                    <h2 class="text-3xl font-bold">HydroPredict</h2>
+                </div>
+                <a href="/" class="text-base font-bold flex items-center">
+                    <i data-lucide="home" class="w-6 h-6 mr-2"></i> Home
+                </a>
+            </div>
+        </nav>
+
+        <!-- Arrow Sections -->
+        <div class="w-full mx-auto bg-gradient-to-r from-blue-100 to-blue-400">
+            <div class="flex flex-col md:flex-row text-white text-center">
+                <!-- IoT Sensors -->
+                <div
+                    class="flex-1 p-6 bg-blue-700 clip-arrow-inward-left transition-all duration-300 hover:bg-blue-600 group">
+                    <div class="flex justify-center items-center gap-2 group-hover:animate-shake">
+                        <i data-lucide="cpu" class="w-8 h-8"></i>
+                        <h2 class="text-xl font-bold">IoT Sensors</h2>
+                    </div>
+                </div>
+
+                <!-- Monitored Components -->
+                <div
+                    class="flex-1 p-6 bg-blue-800 clip-arrow-inward-left transition-all duration-300 hover:bg-blue-700 group">
+                    <div class="flex justify-center items-center gap-2 group-hover:animate-shake">
+                        <i data-lucide="settings" class="w-8 h-8"></i>
+                        <h2 class="text-xl font-bold">Monitored Components</h2>
+                    </div>
+                </div>
+
+                <!-- Predictive Maintenance -->
+                <div
+                    class="flex-1 p-6 bg-blue-900 clip-arrow-inward-left transition-all duration-300 hover:bg-blue-800 group">
+                    <div class="flex justify-center items-center gap-2 group-hover:animate-shake">
+                        <i data-lucide="trending-up" class="w-8 h-8"></i>
+                        <h2 class="text-xl font-bold">Predictive Maintenance</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards Section -->
+        <div class="flex flex-col md:flex-row justify-center items-stretch mt-6 px-4 gap-4 container mx-auto">
+            <!-- IoT Sensors Card -->
+            <div
+                class="bg-white shadow-lg rounded-lg p-6 w-full text-center hover:shadow-xl hover:-translate-y-2 flex flex-col justify-between transition-all duration-300">
+                <i data-lucide="cpu" class="w-12 h-12 mx-auto text-black mb-4"  style="color: #2563eb;"></i>
+                <p class="text-gray-600 mb-4">Advanced sensors for real-time monitoring of hydraulic systems.</p>
+                <div class="border-t border-gray-300 pt-4 grid grid-cols-2 gap-4 text-gray-700 text-sm">
+                    <div>
+                        <h4 class="font-semibold text-black">Pressure Sensors</h4>
+                        <p class="text-gray-500 text-xs">0-10,000 PSI range</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-black">Flow Sensors</h4>
+                        <p class="text-gray-500 text-xs">0.1-100 GPM range</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-black">Temperature Sensors</h4>
+                        <p class="text-gray-500 text-xs">-40°C to 125°C range</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-black">Power</h4>
+                        <p class="text-gray-500 text-xs">kilo Watts</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monitored Components Card -->
+            <div
+                class="bg-white shadow-lg rounded-lg p-6 w-full text-center hover:shadow-xl hover:-translate-y-2 flex flex-col justify-between transition-all duration-300">
+                <i data-lucide="settings" class="w-12 h-12 mx-auto text-black mb-4"  style="color: #2563eb;"></i>
+                <p class="text-gray-600 mb-4">Key hydraulic system components under constant surveillance.</p>
+                <div class="mt-4 border-t border-gray-300 pt-4">
+                    <div class="grid grid-cols-2 gap-y-3 gap-x-6 text-gray-700 text-sm text-left">
+                        <div>
+                            <h4 class="font-semibold text-black">Pumps</h4>
+                            <p class="text-gray-500 text-xs">Efficiency & output</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Valves</h4>
+                            <p class="text-gray-500 text-xs">Response time & leakage</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Accumulators</h4>
+                            <p class="text-gray-500 text-xs">Energy storage & shock absorption</p>
+
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Coolers</h4>
+                            <p class="text-gray-500 text-xs">Heat dissipation & temperature control</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Predictive Maintenance Card -->
+            <div
+                class="bg-white shadow-lg rounded-lg p-6 w-full text-center hover:shadow-xl hover:-translate-y-2 flex flex-col justify-between transition-all duration-300">
+                <i data-lucide="trending-up" class="w-12 h-12 mx-auto text-black mb-4"  style="color: #2563eb;"></i>
+                <p class="text-gray-600 mb-4">AI-driven insights to prevent hydraulic system failures.</p>
+                <div class="mt-4 border-t border-gray-300 pt-4">
+                    <div class="grid grid-cols-2 gap-y-3 gap-x-6 text-gray-700 text-sm text-left">
+                        <div>
+                            <h4 class="font-semibold text-black">Failure Prediction</h4>
+                            <p class="text-gray-500 text-xs">95% accuracy rate</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Maintenance Scheduling</h4>
+                            <p class="text-gray-500 text-xs">Optimized intervals</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Performance Analytics</h4>
+                            <p class="text-gray-500 text-xs">Analyse your data</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Cost Savings</h4>
+                            <p class="text-gray-500 text-xs">Up to 30% reduction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Table -->
+        <div
+            class="bg-white shadow-lg rounded-lg m-6 p-6 w-full max-w-6xl mx-auto transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+            <h2 class="text-xl font-bold mb-4 text-gray-700 text-center">Formatting your Data</h2>
+            <p class="text-md text-gray-500 text-center mb-4">Make sure your data is in the form of a folder having
+                these files. It's very important that you know your system's history!</p>
+            <div class="overflow-x-auto p-4">
+                <table class="w-full border-collapse border border-gray-300 text-center">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="border border-gray-300 px-4 py-2">EPS1.txt</th>
+                            <th class="border border-gray-300 px-4 py-2">FS1.txt</th>
+                            <th class="border border-gray-300 px-4 py-2">FS2.txt</th>
+                            <th class="border border-gray-300 px-4 py-2">CE.txt</th>
+                            <th class="border border-gray-300 px-4 py-2">CP.txt</th>
+                            <th class="border border-gray-300 px-4 py-2">PS2.txt</th>
+                            <th class="border border-gray-300 px-4 py-2">PS6.txt</th>
+                            <th class="border border-gray-300 px-4 py-2">SE.txt</th>
+                            <th class="border border-gray-300 px-4 py-2">TS2.txt</th>
+                            <th class="border border-gray-300 px-4 py-2">TS4.txt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-gray-700">
+                            <td class="border border-gray-300 px-4 py-2">6000</td>
+                            <td class="border border-gray-300 px-4 py-2">600</td>
+                            <td class="border border-gray-300 px-4 py-2">600</td>
+                            <td class="border border-gray-300 px-4 py-2">60</td>
+                            <td class="border border-gray-300 px-4 py-2">60</td>
+                            <td class="border border-gray-300 px-4 py-2">6000</td>
+                            <td class="border border-gray-300 px-4 py-2">6000</td>
+                            <td class="border border-gray-300 px-4 py-2">60</td>
+                            <td class="border border-gray-300 px-4 py-2">60</td>
+                            <td class="border border-gray-300 px-4 py-2">60</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="relative flex justify-center">
+               <!-- <form id="uploadForm" action="/hydraulic" method="post" enctype="multipart/form-data">-->
+               <!--     <label class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded cursor-pointer">-->
+               <!--         Select & Upload Folder-->
+               <!--         <input type="file" name="folder" webkitdirectory directory multiple class="hidden"-->
+               <!--             id="folder">-->
+               <!--     </label>-->
+               <!--     <button type="submit">Upload</button>-->
+               <!-- </form>-->
+               <form action="/hydraulic" method="POST" enctype="multipart/form-data">
+                    <label for="folder">Choose Folder:</label>
+                    <input type="file" name="folder[]" id="folder[]" multiple required>
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- System Status -->
+        <div
+            class="bg-white shadow-lg rounded-lg m-6 p-6 w-full text-center max-w-6xl mx-auto transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+            <h2 class="text-xl font-bold text-gray-700 mb-4 flex justify-center gap-2">
+                <i data-lucide="activity" class="w-6 h-6 text-gray-700"></i> System Status
+            </h2>
+            <h2>Prediction Graphs</h2>
+               <img src="data:image/png;base64,{{ img_base64 }}" alt="Prediction Graph will be displayed here">
+
+            <!-- First Row -->
+            <div class="mt-4 grid grid-cols-4 gap-4 text-center">
+                <div class="p-4 bg-blue-100 rounded-lg">
+                    <i data-lucide="thermometer-snowflake" class="w-6 h-6 text-blue-700 mx-auto mb-2"></i>
+                    <h3 class="text-lg font-semibold text-blue-700">Cooler</h3>
+                    <p id="pressureValue" class="text-xl font-bold text-gray-900">{{ predictions[-1][0] }} %</p>
+                    <hr class="border border-black" />
+                    <p class="text-md text-gray-900 text-left">3%: Close to total failure</p>
+                    <p class="text-md text-gray-900 text-left">20%: Reduced efficiency</p>
+                    <p class="text-md text-gray-900 text-left">100%: Full efficiency</p>
+                </div>
+                <div class="p-4 bg-blue-100 rounded-lg">
+                    <i data-lucide="sliders-horizontal" class="w-6 h-6 text-blue-700 mx-auto mb-2"></i>
+                    <h3 class="text-lg font-semibold text-blue-700">Valve</h3>
+                    <p id="temperatureValue" class="text-xl font-bold text-gray-900">{{ predictions[-1][1] }} %</p>
+                    <hr class="border border-black" />
+                    <p class="text-md text-gray-900 text-left">100%: Optimal switching behavior</p>
+                    <p class="text-md text-gray-900 text-left">90%: Small lag</p>
+                    <p class="text-md text-gray-900 text-left">80%: Severe lag</p>
+                    <p class="text-md text-gray-900 text-left">73%: Close to total failure</p>
+                </div>
+                <div class="p-4 bg-blue-100 rounded-lg">
+                    <i data-lucide="droplet" class="w-6 h-6 text-blue-700 mx-auto mb-2"></i>
+                    <h3 class="text-lg font-semibold text-blue-700">Pump</h3>
+                    <p id="pressureValue" class="text-xl font-bold text-gray-900">{{ predictions[-1][2] }} flag</p>
+                    <hr class="border border-black" />
+                    <p class="text-md text-gray-900 text-left">0: No leakage</p>
+                    <p class="text-md text-gray-900 text-left">1: Weak leakage</p>
+                    <p class="text-md text-gray-900 text-left">2: Severe leakage</p>
+
+                </div>
+                <div class="p-4 bg-blue-100 rounded-lg">
+                    <i data-lucide="battery-charging" class="w-6 h-6 text-blue-700 mx-auto mb-2"></i>
+                    <h3 class="text-lg font-semibold text-blue-700">Accumulator</h3>
+                    <p id="temperatureValue" class="text-xl font-bold text-gray-900">{{ predictions[-1][3] }} bar</p>
+                    <hr class="border border-black" />
+                    <p class="text-md text-gray-900 text-left">130: Optimal pressure</p>
+                    <p class="text-md text-gray-900 text-left">115: Slightly reduced pressure</p>
+                    <p class="text-md text-gray-900 text-left">100: Severely reduced pressure</p>
+                    <p class="text-md text-gray-900 text-left">90: Close to total failure</p></div>
+            </div>
+
+            <!-- Third Row (Single Item) -->
+            <div class="mt-4 grid grid-cols-1 gap-4 text-center">
+                <div class="p-4 bg-blue-100 rounded-lg">
+                    <i data-lucide="activity" class="w-6 h-6 text-blue-700 mx-auto mb-2"></i>
+                    <h3 class="text-lg font-semibold text-blue-700">Overall Stability</h3>
+                    <p id="pressureValue" class="text-xl font-bold text-gray-900">{{ current_state }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white shadow-lg rounded-lg m-6 p-6 w-full max-w-6xl mx-auto transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+            <h2 class="text-xl font-bold mb-4 text-gray-700 text-center">Details about the Model</h2>
+            <p class="text-md text-gray-500 text-center mb-4">Here's how your data is converted into useful insights!</p>
+        
+            <!-- Model Overview Section -->
+            <div class="overflow-x-auto p-4">
+                <h3 class="text-lg font-semibold text-gray-700 mb-2">Model Overview</h3>
+                <p class="text-md text-gray-600 mb-2">This model uses sensor data to predict the failure or non-failure state of five components in a hydraulic system. </p>
+                
+                <p class="text-md text-gray-600 mb-2"><strong>Input Features:</strong> 
+                    The model is trained on data from the following sensors: CE, CP, SE, PS6, PS2, FS1, FS2, EPS1, TS4, TS2.
+                    Statistical features are calculated for each sensor, such as mean, standard deviation, maximum, minimum, range, and RMS values.
+                </p>
+                
+                <p class="text-md text-gray-600 mb-2"><strong>Output:</strong> 
+                    The model predicts the states of five components: cooler, valve, pump, accumulator, and stable. The output is a classification indicating the operational state of each component.
+                </p>
+                
+                <p class="text-md text-gray-600 mb-2"><strong>Model Algorithm:</strong> 
+                    The model uses a Random Forest Classifier wrapped in a MultiOutputClassifier to handle the multi-label classification task. This allows for simultaneous predictions of multiple components.
+                </p>
+            </div>
+        
+            <!-- Feature Importance Section -->
+            <div class="overflow-x-auto p-4">
+                <h3 class="text-lg font-semibold text-gray-700 mb-2">Feature Importance</h3>
+                <p class="text-md text-gray-600 mb-4">The following features are the most important for predicting the state of each component:</p>
+                <ul class="list-disc list-inside">
+                    <li><strong>Cooler:</strong> CP_max</li>
+                    <li><strong>Valve:</strong> PS2_std</li>
+                    <li><strong>Pump:</strong> FS1_rms</li>
+                    <li><strong>Accumulator:</strong> FS2_mean</li>
+                    <li><strong>Stable:</strong> FS1_mean</li>
+                </ul>
+                <p class="text-md text-gray-600 mb-2">These features have been determined based on feature importance scores derived from the Random Forest model.</p>
+                <div class="relative flex justify-center">
+                    <!-- Embed or add the feature importance graph here -->
+                    <img src="{{ url_for('static', filename='imp_feat.png') }}" alt="Feature Importance Graph" class="w-full max-w-xl rounded-lg shadow-lg">
+                </div>
+            </div>
+        
+            <!-- Confusion Matrix Section -->
+            <div class="overflow-x-auto p-4">
+                <h3 class="text-lg font-semibold text-gray-700 mb-2">Confusion Matrix</h3>
+                <p class="text-md text-gray-600 mb-4">The confusion matrix shows the performance of the model on the test data, indicating the number of correct and incorrect predictions for each component.</p>
+                <div class="relative flex justify-center">
+                    <!-- Embed or add the confusion matrix image here -->
+                    <img src="{{ url_for('static', filename='conf_mat.png') }}" alt="Confusion Matrix" class="w-full max-w-xl rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/1259924/pexels-photo-1259924.jpeg');
+        }
+
+        .clip-arrow-inward-left {
+            clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 10% 50%);
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animate-shake {
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById("folderInput").addEventListener("change", function () {
+            document.getElementById("uploadForm").submit(); // Auto-submit
+        });
+    </script>
+</body>
+
+</html>

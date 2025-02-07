@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Maintenance of Industrial Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .bg-blur {
+            backdrop-filter: blur(8px);
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <!-- Full page background -->
+    <div class="fixed inset-0 bg-gradient-to-br from-blue-400 to-purple-600 opacity-75 z-0"></div>
+
+    <div class="relative z-10">
+        <!-- Navbar -->
+        <nav class="bg-white bg-opacity-90 text-gray-800 p-4 shadow-lg">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="https://img.freepik.com/premium-vector/predictive-maintenance-glyph-solid-black-illustration_120816-10570.jpg"
+                        alt="Logo" class="w-12 h-12 rounded-full shadow-md">
+                    <h1
+                        class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                        Predictive Maintenance - OctoPaul MaintAIneers
+                    </h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="container mx-auto my-12 px-6">
+            <div class="bg-white bg-opacity-90 p-8 rounded-xl shadow-2xl flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800">Let's Predict Before the Failure Verdict!</h2>
+                    <p class="text-xl text-gray-600 mb-8">Harness the power of data analytics and machine learning to
+                        anticipate equipment failures before they occur.</p>
+                    <a href="#"
+                        class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300 inline-flex items-center">
+                        <i class="fas fa-rocket mr-2"></i> Get Started
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://t3.ftcdn.net/jpg/09/41/52/00/360_F_941520060_XDy3T40tT2lmIEOhfPkcIzWyLkcNcDe1.jpg"
+                        alt="Predictive Maintenance" class="rounded-lg shadow-lg w-full max-w-md float-animation">
+                </div>
+            </div>
+        </div>
+
+        <!-- What is Predictive Maintenance -->
+        <div class="container mx-auto my-16 px-6">
+            <div class="bg-white bg-opacity-90 p-8 rounded-xl shadow-2xl">
+                <h3 class="text-3xl font-bold mb-6 text-gray-800">What is Predictive Maintenance?</h3>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Predictive maintenance is a proactive approach that leverages cutting-edge technologies to
+                    revolutionize industrial operations. By harnessing the power of data analytics, machine learning
+                    algorithms, and real-time sensor data, we can:
+                </p>
+                <ul class="mt-6 space-y-4 text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                        Anticipate equipment failures before they occur
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                        Minimize costly downtime and production interruptions
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                        Optimize maintenance schedules and resource allocation
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                        Extend the lifespan of critical equipment and assets
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Application Areas -->
+        <div class="container mx-auto my-16 px-6">
+            <h3 class="text-3xl font-bold mb-10 text-center text-white">Application Areas</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Naval Systems -->
+                <div
+                    class="bg-white bg-opacity-90 p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300">
+                    <i class="fas fa-ship text-4xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-3 text-gray-800">Naval Systems</h4>
+                    <p class="text-gray-600">Comprehensive monitoring to ensure optimal performance and reliability of
+                        critical maritime equipment.</p>
+                    <a href="/naval"><button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Try it out</button></a>
+                </div>
+                
+                <!-- Hydraulic Systems -->
+                <div
+                    class="bg-white bg-opacity-90 p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300">
+                    <i class="fas fa-tint text-4xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-3 text-gray-800">Hydraulic Systems</h4>
+                    <p class="text-gray-600">Advanced monitoring of fluid levels, pressure variations, and potential
+                        leaks to prevent catastrophic failures.</p>
+                    <a href="/hydraulic"><button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Try it out</button></a>
+
+                </div>
+                <!-- Ball Bearings -->
+                <div
+                    class="bg-white bg-opacity-90 p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300">
+                    <i class="fas fa-cog text-4xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-3 text-gray-800">Ball Bearings</h4>
+                    <p class="text-gray-600">Sophisticated vibration and temperature analysis for early detection of
+                        bearing faults and wear patterns.</p>
+                    <a href="/bearing"><button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Try it out</button></a>
+
+                </div>
+                <!-- Manufacturing -->
+                <div
+                    class="bg-white bg-opacity-90 p-6 rounded-xl shadow-lg text-center hover:shadow-2xl transition duration-300">
+                    <i class="fas fa-industry text-4xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-3 text-gray-800">Manufacturing</h4>
+                    <p class="text-gray-600">Continuous monitoring and analysis to detect wear and tear on critical
+                        machinery components in real-time.</p>
+                    <a href="/manufacturing"><button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Try it out</button></a>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 relative z-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>Team OctoPaul MaintAIneers</p>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

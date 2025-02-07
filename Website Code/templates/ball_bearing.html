@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Maintenance of Ball Bearing Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        table {
+            width: 400px;
+            margin: 20px 20px;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td {
+            background-color: #fafafa;
+        }
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .container_mine {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        /* Ensure the image fits within the container */
+        .image-container img {
+            max-width: 90%; /* Adjust to desired size */
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container_mine {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-container img, table {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed relative">
+    <div class="absolute inset-0 bg-black/30 backdrop-blur-md"></div>
+    <div class="relative z-10">
+        <!-- Navbar -->
+        <nav class="bg-white text-black p-6 shadow-md">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvsyquAbCKrt7BEwQkKUhg2-4YNxfddJD8Gg&s"
+                        alt="Logo" class="w-10 h-10">
+                    <h2 class="text-3xl font-bold">BallPredict</h2>
+                </div>
+                <a href="/" class="text-base font-bold flex items-center">
+                    <i data-lucide="home" class="w-6 h-6 mr-2"></i> Home
+                </a>
+            </div>
+        </nav>
+
+        <!-- Arrow Sections -->
+        <div class="w-full mx-auto bg-gradient-to-r from-gray-100 to-gray-400">
+            <div class="flex flex-col md:flex-row text-white text-center">
+                <!-- IoT Sensors -->
+                <div
+                    class="flex-1 p-6 bg-gray-700 clip-arrow-inward-left transition-all duration-300 hover:bg-gray-600 group">
+                    <div class="flex justify-center items-center gap-2 group-hover:animate-shake">
+                        <i data-lucide="cpu" class="w-8 h-8"></i>
+                        <h2 class="text-xl font-bold">IoT Sensors</h2>
+                    </div>
+                </div>
+
+                <!-- Monitored Components -->
+                <div
+                    class="flex-1 p-6 bg-gray-800 clip-arrow-inward-left transition-all duration-300 hover:bg-gray-700 group">
+                    <div class="flex justify-center items-center gap-2 group-hover:animate-shake">
+                        <i data-lucide="settings" class="w-8 h-8"></i>
+                        <h2 class="text-xl font-bold">Monitored Components</h2>
+                    </div>
+                </div>
+
+                <!-- Predictive Maintenance -->
+                <div
+                    class="flex-1 p-6 bg-gray-900 clip-arrow-inward-left transition-all duration-300 hover:bg-gray-800 group">
+                    <div class="flex justify-center items-center gap-2 group-hover:animate-shake">
+                        <i data-lucide="trending-up" class="w-8 h-8"></i>
+                        <h2 class="text-xl font-bold">Predictive Maintenance</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards Section -->
+        <div class="flex flex-col md:flex-row justify-center items-stretch mt-6 px-4 gap-4 container mx-auto">
+            <!-- Accelerometers Monitoring Card -->
+            <div
+                class="bg-white shadow-lg rounded-lg p-6 w-full text-center hover:shadow-xl hover:-translate-y-2 flex flex-col justify-between transition-all duration-300">
+                <i data-lucide="cpu" class="w-12 h-12 mx-auto text-black mb-4"></i>
+                <p class="text-gray-600 mb-4">Advanced accelerometers monitoring vibrations at critical motor locations.
+                </p>
+                <div class="border-t border-gray-300 pt-4 grid grid-cols-2 gap-4 text-gray-700 text-sm">
+                    <div>
+                        <h4 class="font-semibold text-black">Drive End (DE)</h4>
+                        <p class="text-gray-500 text-xs">Measures load-side vibrations</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-black">Fan End (FE)</h4>
+                        <p class="text-gray-500 text-xs">Monitors cooling system vibrations</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-black">Base (BA)</h4>
+                        <p class="text-gray-500 text-xs">Overall motor structural stability</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monitored Components Card -->
+            <div
+                class="bg-white shadow-lg rounded-lg p-6 w-full text-center hover:shadow-xl hover:-translate-y-2 flex flex-col justify-between transition-all duration-300">
+                <i data-lucide="settings" class="w-12 h-12 mx-auto text-black mb-4"></i>
+                <p class="text-gray-600 mb-4">Key components of the ball bearing system under real-time surveillance.
+                </p>
+                <div class="mt-4 border-t border-gray-300 pt-4">
+                    <div class="grid grid-cols-2 gap-y-3 gap-x-6 text-gray-700 text-sm text-left">
+                        <div>
+                            <h4 class="font-semibold text-black">Ball Bearings</h4>
+                            <p class="text-gray-500 text-xs">Wear & misalignment detection</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Motor Shaft</h4>
+                            <p class="text-gray-500 text-xs">Rotational stability & balance</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Overall Motor Health</h4>
+                            <p class="text-gray-500 text-xs">Comprehensive system analysis</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Couplings & Gears</h4>
+                            <p class="text-gray-500 text-xs">Torque transfer efficiency</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Predictive Maintenance Card -->
+            <div
+                class="bg-white shadow-lg rounded-lg p-6 w-full text-center hover:shadow-xl hover:-translate-y-2 flex flex-col justify-between transition-all duration-300">
+                <i data-lucide="trending-up" class="w-12 h-12 mx-auto text-black mb-4"></i>
+                <p class="text-gray-600 mb-4">AI-driven analytics for predictive maintenance of ball bearing systems.
+                </p>
+                <div class="mt-4 border-t border-gray-300 pt-4">
+                    <div class="grid grid-cols-2 gap-y-3 gap-x-6 text-gray-700 text-sm text-left">
+                        <div>
+                            <h4 class="font-semibold text-black">Vibration Analysis</h4>
+                            <p class="text-gray-500 text-xs">Detects fault patterns</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Remaining Useful Life</h4>
+                            <p class="text-gray-500 text-xs">Predicts remaining component lifespan</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Feature Extraction</h4>
+                            <p class="text-gray-500 text-xs">RMS, Skewness, Kurtosis</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-black">Fault Severity Classification</h4>
+                            <p class="text-gray-500 text-xs">Crest factor & defect ranking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Data Table -->
+        <div
+            class="bg-white shadow-lg rounded-lg m-6 p-6 w-full max-w-6xl mx-auto transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+            <h2 class="text-xl font-bold mb-4 text-gray-700 text-center">Formatting your Data</h2>
+            <p class="text-md text-gray-500 text-center mb-4">Make sure your data is in the form of a csv file having
+                these columns. It's very important that you know your system's history!</p>
+            <div class="overflow-x-auto p-4">
+                <table class="w-full border-collapse border border-gray-300 text-center">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="border border-gray-300 px-4 py-2">max</th>
+                            <th class="border border-gray-300 px-4 py-2">min</th>
+                            <th class="border border-gray-300 px-4 py-2">mean</th>
+                            <th class="border border-gray-300 px-4 py-2">sd</th>
+                            <th class="border border-gray-300 px-4 py-2">rms</th>
+                            <th class="border border-gray-300 px-4 py-2">skewness</th>
+                            <th class="border border-gray-300 px-4 py-2">kurtosis</th>
+                            <th class="border border-gray-300 px-4 py-2">crest</th>
+                            <th class="border border-gray-300 px-4 py-2">form</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="relative flex justify-center">
+                <form id="uploadForm" action="/bearing" method="post" enctype="multipart/form-data">
+                    <label class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded cursor-pointer">
+                        Select Your Data
+                        <input type="file" name="inp_file" class="hidden"
+                            id="inp_file">
+                        </label>
+                        <button type="submit">Upload</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- System Status -->
+        <div
+            class="bg-white shadow-lg rounded-lg m-6 p-6 w-full text-center max-w-6xl mx-auto transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+            <h2 class="text-xl font-bold text-gray-700 mb-4 flex justify-center gap-2">
+                <i data-lucide="activity" class="w-6 h-6 text-gray-700"></i> System Status
+            </h2>
+            <h2>Time Series Machine Condition Analysis</h2>
+            <img src="data:image/png;base64,{{ img_base64_1 }}" alt="Prediction Graph will be displayed here">
+
+            <hr>
+            <br>
+
+            <h2>Overall Machine State in this time period</h2>
+            <div class="container_mine">
+            <div class="image-container">
+                <img src="data:image/png;base64,{{ img_base64_2 }}" alt="Prediction Graph will be displayed here">
+            </div>
+            <div class="table-container">
+                {% if class_counts %}
+            <table>
+                <caption>Class Distribution</caption>
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for class_name, count in class_counts.items() %}
+                        <tr>
+                            <td>{{ class_name }}</td>
+                            <td>{{ count }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+        </div>
+    </div>
+
+            <!-- First Row -->
+            <div class="mt-4 grid grid-cols-1 gap-4 text-center">
+                <div class="p-4 bg-gray-100 rounded-lg">
+                    <!-- <i data-lucide="thermometer-snowflake" class="w-6 h-6 text-gray-700 mx-auto mb-2"></i> -->
+                    <h3 class="text-lg font-semibold text-gray-700">Current Status</h3>
+                    <p id="pressureValue" class="text-xl font-bold text-gray-900">{{ labelled_predictions[-1] }}</p>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="bg-white shadow-lg rounded-lg m-6 p-6 w-full max-w-6xl mx-auto transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+            <h2 class="text-xl font-bold mb-4 text-gray-700 text-center">Fault Classification and RUL Prediction Using Machine Learning</h2>
+            <p class="text-md text-gray-500 text-center mb-4">Here's how the machine learning model is used to predict faults and Remaining Useful Life (RUL) in ball bearings!</p>
+            <div class="overflow-x-auto p-4">
+                <h3 class="text-lg font-semibold text-gray-800">Overview of the Process:</h3>
+                <ul class="list-disc pl-5">
+                    <li><strong>Input:</strong> Statistical features like maximum, minimum, mean, standard deviation, root mean square, skewness, kurtosis, and crest are extracted.</li>
+                    <li><strong>Output:</strong> The faults are categorized (e.g., Ball_007_1, IR_014_1) and mapped to integers using Label Encoding for classification tasks.</li>
+                    </ul>
+            </div>
+            
+            <div class="overflow-x-auto p-4 mt-6">
+                <h3 class="text-lg font-semibold text-gray-800">Classification Report:</h3>
+                <table class="min-w-full border-collapse text-sm">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2 text-left border">Class</th>
+                            <th class="px-4 py-2 text-left border">Precision</th>
+                            <th class="px-4 py-2 text-left border">Recall</th>
+                            <th class="px-4 py-2 text-left border">F1-Score</th>
+                            <th class="px-4 py-2 text-left border">Support</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-4 py-2 border">0</td>
+                            <td class="px-4 py-2 border">0.93</td>
+                            <td class="px-4 py-2 border">0.93</td>
+                            <td class="px-4 py-2 border">0.93</td>
+                            <td class="px-4 py-2 border">46</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border">1</td>
+                            <td class="px-4 py-2 border">0.92</td>
+                            <td class="px-4 py-2 border">0.94</td>
+                            <td class="px-4 py-2 border">0.93</td>
+                            <td class="px-4 py-2 border">50</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border">2</td>
+                            <td class="px-4 py-2 border">0.96</td>
+                            <td class="px-4 py-2 border">0.90</td>
+                            <td class="px-4 py-2 border">0.93</td>
+                            <td class="px-4 py-2 border">49</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border">3</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">37</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border">4</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">47</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border">5</td>
+                            <td class="px-4 py-2 border">0.95</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">0.97</td>
+                            <td class="px-4 py-2 border">39</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border">6</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">39</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border">7</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">54</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border">8</td>
+                            <td class="px-4 py-2 border">0.93</td>
+                            <td class="px-4 py-2 border">0.93</td>
+                            <td class="px-4 py-2 border">0.93</td>
+                            <td class="px-4 py-2 border">54</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border">9</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">1.00</td>
+                            <td class="px-4 py-2 border">45</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border font-bold">Accuracy</td>
+                            <td class="px-4 py-2 border" colspan="3">0.97</td>
+                            <td class="px-4 py-2 border">460</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border font-bold">Macro avg</td>
+                            <td class="px-4 py-2 border" colspan="3">0.97</td>
+                            <td class="px-4 py-2 border">460</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 border font-bold">Weighted avg</td>
+                            <td class="px-4 py-2 border" colspan="3">0.97</td>
+                            <td class="px-4 py-2 border">460</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="relative flex justify-center mt-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Model Highlights:</h3>
+                <ul class="list-disc pl-5">
+                    <li><strong>Classification Task:</strong> The Random Forest Classifier achieves good accuracy in classifying fault types with a confusion matrix showing correct classifications (e.g., Ball_007_1) and misclassifications (e.g., OR_014_6_1).</li>
+                    <li><strong>RUL Prediction:</strong> The Random Forest Regressor is effective in predicting the Remaining Useful Life, with the model trained to estimate the lifespan of ball bearings.</li>
+                    <li><strong>ARIMA Forecasting:</strong> ARIMA model provides insights into the future behavior of the RMS feature, which is important for predicting failures in the system.</li>
+                    <li><strong>Fault Labels:</strong> The dataset includes fault labels such as 'Ball_007_1', 'IR_021_1', 'Normal_1', which represent varying levels of fault severity and impact on system performance.</li>
+                </ul>
+            </div>
+            <div class="relative flex justify-center">
+                <!-- Embed or add the confusion matrix image here -->
+                <img src="{{ url_for('static', filename='arima.png') }}" alt="ARIMA Results" class="w-full max-w-xl rounded-lg shadow-lg">
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/159275/macro-focus-cogwheel-gear-159275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+        }
+
+        .clip-arrow-inward-left {
+            clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 10% 50%);
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animate-shake {
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById("folderInput").addEventListener("change", function () {
+            document.getElementById("uploadForm").submit(); // Auto-submit
+        });
+    </script>
+</body>
+
+</html>
